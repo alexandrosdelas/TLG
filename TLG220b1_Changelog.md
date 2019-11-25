@@ -1,4 +1,4 @@
-# Update 6 [2.2.0] (2019-11-25)
+# Update 6 [2.2.0 Beta 1] (2019-11-25)
 456 changes
 
 ## Campaign
