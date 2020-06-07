@@ -1,33 +1,49 @@
-# Update 6 [2.2.0 Beta 1] (2019-11-25)
-456 changes
+# Update 6 [2.2.0 Beta 2] (2020-06-07)
+588 changes
 
 ## Campaign
 ### New map
 - New interlude "Adamant"
-- The heroes return to Stormwind
 
 ### Multiple maps
 #### Gameplay
 - User control is now disabled less often
 - Khadgar will no longer move closer to a nearby unit when right-clicking it
 - Increased collision size of Moroes from 16 to 32
+- Crates with Special Lockpins are no longer removed on Hard difficulty
+- Most crates and barrels are now vulnerable
+- Some unimportant units can no longer be selected
+- Khadgar can now get Khadgar's Pipe of Insight when finding six Specters
+- Removed abilities of fun items in Marketplaces
 * Medivh
-  - Increased armor of Medivh from 0 to 1
-  - Increased base damage of Medivh from 9 to 27
-  - Decreased damage sides per die of Medivh from 16 to 5
+  - Medivh
+  - Is now a hero unit
+  - Increased attack cooldown from 2.0 to 2.13
+  - Added hero glow
+* Garona
+  - Can now gain experience normally across multiple maps
+  - Can now be restored from game cache
+  - Increased maximum hero level from 8 to 10
+  - Increased maximum level of Wind Walk from 2 to 3
+  - Increased maximum level of Steal from 1 to 3
+  - Increased maximum level of Focus from 2 to 3
+  - Increased scale from 0.9 to 1.1
 * Karazhan maps
   - Added more pathing blockers to some areas
   - Added Line of Sight Blockers to the Secret Room
   - Moved Magical Pen Wall to Observatory
   - Changed position of some Circles of Power
   - Moved all gameplay elements in the Museum
+  - Changed camera angle in Botanic Garden
+  - Changed camera angles in Library
+  - Changed camera angles in Banquet Hall
 
 #### User Interface
 - Retconned The Great Dark Beyond into The Twisting Nether where appropriate
-- Inventory/Lockpick error transmissions are no longer played if already playing
 - Updated campaign preview image
 - Fixed spelling and grammar
 - Removed many transmissions and hints
+- Removed most green text on Hard difficulty
 - Changed text in some transmissions
 - Updated duration of some transmissions
 - Updated loading screens
@@ -44,16 +60,24 @@
 - Some floating texts will now fade out
 - New icon for Favourite Book/Book of Medivh
 - Changed color of leaderboards
+- No longer overwrites player name
+- Renamed "Sir Anduin Lothar" to "Anduin Lothar"
+- Added hint messages for finding a Specter item
 
 #### Audio/Visuals
+- Khadgar: Decreased selection scale from 1.5 to 1.2
 * Khadgar (Grunt)
   - Khadgar (Grunt): Added Hero Glow
   - Khadgar (Grunt): Decreased selection scale from 1.5 to 1.4
+* Lothar
+  - No longer buffs other units with Devotion Aura
+  - Decreased height of life bar
 * Karazhan
   - Changed rotation of a Karazhan Archway to 215
   - Moved runes at Medivh's bed
   - Decreased scale of Church Font in Medivh's quarters
   - Redesigned Museum, Banquet Hall and Medivh's Secret Quarters
+- Improved camera smoothing
 - Removed unused custom data and imports
 - Fixed custom music not playing
 - Improved fade in/out for all cinematics
@@ -67,17 +91,29 @@
 - New model for Hammer by Blaxor
 - Removed blight in some areas
 - Fixed position of Scout Tower outside Karazhan
-- Lothar no longer buffs other units with Devotion Aura
 - Reset animation speed of dying units to 100%
 - Improved Far Clipping for some cameras
 - All cinematics and transmissions are now inside a trigger queue
 - Camera movement is no longer inside a trigger queue
 - Changed model of Priest to Reign of Chaos version
 - Changed model of Sorceress to Reign of Chaos version
+- Removed some magic runes
+- Decreased scale of Pig Farms from 4.0 to 3.0
 
 ### Abilities
+* Inventory
+  - Changed usage based on difficulty
+  - Easy: Items are used or combined automatically
+  - Normal: Items are combined automatically
+  - Hard: Items must be combined individually
+  - Changed classification of all usable/combinable items to Campaign
+  - Changed classification of all non-usable/non-combinable items to Permanent
+  - Only campaign items will be displayed in the dialog
+  - Error transmissions are now floating texts
+  - Usable/combinable items now cost 5/15/25 mana
 * Pillar of Flame
   - Renamed Flame Strike to Pillar of Flame
+  - Changed model and sound effect
   - New icon by The_Avenger's_Return
   - Decreased area of effect from 200 to 100
   - Decreased cooldown from 10 to 5 seconds
@@ -85,6 +121,15 @@
   - Decreased duration from 9 to 5 seconds
   - Decreased cast range from 800 to 600
   - Can no longer damage Khadgar
+  * Focus
+  - Visual aids now appear on all items
+  - Visual aids now only exist when necessary
+  - New visual aid model for items
+  - New icon by KelThuzad
+  - Increased mana cost from 25 to 35
+* Alchemy
+  - Decreased mana cost from 60 to 50
+  - Replaced empty dialog with floating text when lacking ingredients
 * Realm of Time
   - Can now be cast on all enemy or neutral units
   - Can be recast to cancel it on a target unit
@@ -106,29 +151,42 @@
   - Changed spell information on Normal difficulty
   - Runes are no longer hidden on Normal and Hard difficulty
   - Added white glowing runes on Hard difficulty
-- Changed Haste buff to Haste
+* Haste
+  - New icon by Wildfire
+  - Changed buff to Haste
+  - Decreased speed from 35/45/55% to 25/40/55%
+- Lockpicking error transmissions are now floating texts
 - Steal now works on invulnerable units
+- Transfer items: Changed "inventory full" transmission
 
 ### Items
+- Replaced many useless items with consumables that can be turned into other items
+- Removed remaining useless items
+- Added tooltip for usable/combinable items
+- Removed Chest Keys
 - The Song of Aegwynn now functions like a Spell Book
 - Removed Conan's Claws and Spartan Shield from Volbir and Bolvir Merchandise
-- Acquiring a Tome of (Greater) Experience with Garona now gives the item to Khadgar
 - Will no longer remove power ups at map end
 - Renamed Spell Book to Book of Medivh
-- New icon for Haste by Wildfire
-- New icon for Focus by KelThuzad
-
+- Decreased duration of Rune of Speed from 60 to 20 seconds
+- Decreased range of Wand of Chain Lightning from 700 to 600
+- Decreased experience gain of Tomes of Greater Experience from 500 to 300
 
 ## Prologue
 - Renamed from "The Violet City" to "The Kirin Tor"
+- Redesigned Dalaran
+- Changed fog color
+- Changed color of Dalaran player to Purple
+- Replaced all Spell Breakers with Captains
 - New loading screen by gemkimart
 - Replaced Loading sound with a Teleport effect
-- Fixed small library
-- Changed position and appearance of some Statues
-- Added a Spell Breaker moving around
+- Added more units moving around
+- New model for Dela by loktar
+- Added hero glow to Guzbah
 
 ## Chapter 1
 ### Gameplay
+- Khadgar now starts with a Focus item
 - Failing the first chest no longer activates the second chest
 - Added more pathing blockers around Karazhan
 - Decreased hit points of Gargoyles to 200
@@ -146,6 +204,7 @@
 - Magic Land Mines are now invulnerable
 
 ### User Interface
+- Fixed items hint delay
 - Khadgar will now comment when selecting the Specter
 - Removed Backyard/Graveyard hint on Easy and Normal difficulty
 - Removed Shipyard hint on Normal and Hard difficulty
@@ -157,11 +216,16 @@
 - Removed player 12 (The Guardian) from score screen
 - Increased hero level of Professor Marvel from 1 to 3
 - The Return transmission will be activated 6 seconds later
+- Renamed quest "The Tower" to "The Ivory Tower"
 - Changed quest requirement to "Find Page One, Page Two and Page Three"
 - Changed quest requirement to "Create the Gargoyle Spell"
+- Removed Chest Key hint
+- Gold Mines are no longer displayed on the minimap
 
 ### Audio/Visuals
-- Intro: Changed camera
+* Intro
+  - Changed camera
+  - Gold effect no longer created when cinematic is skipped
 - Removed Glowing Runes at Gargoyles
 - Removed Dead Woman
 - Fixed water sound regions
@@ -177,14 +241,7 @@
 - Added a crate with the Laws of Arcane Magic
 - Khadgar can now be controlled during the interviews
 - Items dropped in the Observatory or the Kitchen are now moved to Khadgar's Quarters
-- Khadgar's mana is set to 100% after the first interview
-- Decreased base damage of Skeletal Marksman from 20 to 16
-- Decreased base damage of Unbroken Rager from 20 to 16
-- Decreased base damage of Voidwalker from 22 to 20
-- Decreased base damage of Greater Voidwalker from 35 to 30
-- Decreased base damage of Fire Revenant from 13 to 12
-- Decreased base damage of Sludge Flinger from 22 to 20
-- Decreased base damage of Giant Skeleton Warrior from 11 to 10
+- Added a Tome of Agility
 
 ### User Interface
 - New loading screen by Mr--Jack
@@ -192,15 +249,43 @@
 - Replaced Botanic Garden Hint with transmission by Wraith
 
 ### Audio/Visuals
+- Map around Wraith is no longer visible at map start
 * Intro cinematic
   - Items and a Circle of Power are now hidden
-  - Fixed pathing problems of Khadgar
-* Medivh
-  - Medivh no longer walks away after the first interview
+  - Fixed pathing problems with Khadgar
+* Outland cinematic
+  - Improved pathing blocking
   - Medivh is no longer visible in the Kitchen until the second interview
 - The Specter is now hidden until after the first interview
 - The Library Circles of Power and floating texts are now removed earlier
 - The camera will no longer move after the Outland cinematic
+
+### Quests
+### Alchemy
+- Can no longer drop the Cross
+
+#### The First Interview
+- Khadgar's mana is set to 100% after the first interview
+- Medivh no longer walks away after the first interview
+
+#### The Library
+- Decreased base damage of Skeletal Marksman from 20 to 16
+- Decreased base damage of Unbroken Rager from 20 to 16
+- Decreased base damage of Voidwalker from 22 to 20
+- Decreased base damage of Greater Voidwalker from 35 to 30
+- Decreased base damage of Fire Revenant from 13 to 12
+- Decreased base damage of Sludge Flinger from 22 to 20
+- Decreased base damage of Giant Skeleton Warrior from 11 to 10
+- Moved Arcane Book
+
+#### Gone Mad
+- Removed timer
+- Changed quest requirement to "Bring Medivh to his senses"
+- Redesigned quest include puzzles with items
+- Removed hint about fleeing
+- Removed Medivh's Blink ability
+- Increased movement speed of Medivh from 170 to 170/190/210
+- Added more enemies
 
 ## Chapter 3
 ### Gameplay
@@ -208,16 +293,18 @@
   - Khadgar's mana is now set to 60 until he is healed
   - The Bullfrog can no longer be dropped
   - Decreased hit points of Spitting Spider from 300 to 200
+  - Added a Tome of Strength
 * Finding
   - The Alchemist's chest will now also drop a Sharp Knife
   - A Champion's Curl is now created when using the Sharp Knife on Lothar
+  - The Corpses can now be highlighted with Focus level 1
   - Added Khadgar's Diary
   - The Vulture is no longer ethereal
+  - Replaced M'am and Sax with Volbir and Bolvir
 * Spying
   - Added Lothar's Notes
   - Removed a Grunt from one of the fights
 - Moved Lothar further back
-- Moved crate with Chest Key to the human camp
 - Decreased acquisition range of Swordsman
 - Removed many pathing blockers for the fights
 - Player 1 and Player 2 now treat each other as Neutral
@@ -226,7 +313,6 @@
 ### User Interface
 - Removed Barrel transmission on Normal and Hard difficulty
 - The KhadgarHurt transmission will no longer play twice
-- Increased hero level of Mam and Sax from 1 to 5
 - Can no longer cancel a conversation with Lothar
 - Renamed players Orcish Scouts to Orc Scouts
 - Renamed Log to Bundle of Lumber
@@ -285,13 +371,21 @@
 - Moved Book in Observatory slightly to the left
 - Removed vision on Specter
 - The Signed Papers will now be given directly to Khadgar
+- Redesigned Build Plans puzzle
+- Pillars are no longer vulnerable
+- Added a Mana and a Life Egg
+- Removed a Tome of Agility
+- Removed a Tome of Strength
+- Replaced a Tome of Intelligence with a Tome of Intelligence+2
 * Acetone
   - No longer adds 200 damage to Khadgar
   - Is now a usable item
   - Can now be dropped
   - Is now removed after beating the Gambler
+  - Added a Pathing Blocker at Layla's Shop
 
 ### User Interface
+- Fixed name of attacked citizen in front of Tavern
 - Entering a building will no longer change the camera bounds
 - The first LotharGuardian dialogue can now be skipped
 - No longer creates additional buttons for the PalaceGuardsID dialog
@@ -321,6 +415,7 @@
 - Replaced hint aboud School Area with transmission from Khadgar
 - Renamed Honor Guard One and Honor Guard Two to honor Guard
 - Replaced hint "Talk to Lothar" with a quest requirement
+- The Housing Area hint will no longer repeat
 
 ### Audio/Visuals
 - LotharArrives cinematic: Improved cameras
@@ -346,15 +441,22 @@
 - Removed shared vision on Neutral Passive when entering Albert's Wares
 - Added GoodJob sound when bringing the Building Plans
 - The Barrel of Explosives is now moved to the Circle of Power when dropped
+- Improved terrain at the entrance gate
+- Added Circle of Power to the King's Guards
+- Changed skin type of Horace Kane to Reign of Chaos
+- Removed Player 7 (Citizens) from score screen
+- Fixed Circle of Power in front of Tavern
+- Outro cinematic: Disabled experience gain for Khadgar
 
 ## Chapter 5
 ### Gameplay
 * BanquetVision
   - Added ghosts which must be defeated when acquiring the Ghost Mushroom
+  - The second entrance to the Banquet Hall will now be cleared at the start of the Nielas cinematic
   - Can no longer reach the Barrel of Explosives outside the storeroom
 - Garona: Haste and Inventory are no longer disabled when chasing/fighting Garona
 * Interview
-  - Garona no longer loses her abilities after losing
+  - Garona is no longer missing her abilities after losing
   - Garona is now invulnerable
   - Remade to be more interactive
   - Khadgar can now be controlled
@@ -367,14 +469,18 @@
   - The storage room can now be accessed after the Guldan cinematic
 - Replaced visibility on Chapel and Garden Gate with Fog of War
 - Garona's mana is now 100% after cinematics
-- Replaced a Tome of Greater Experience with multiple Tomes of Experience
 - Cook now remains invulnerable
+- Added a Mana and a Life Egg
+- Removed a Tome of Knowledge
 
 ### User Interface
 * Order
   - The proper quest requirement is now completed when reading an Order message
   - Replaced hint about the correspondence with a transmission by Khadgar
   - Improved description for Message from Lothar
+  - All quest requirements are now properly marked as completed
+  - Improved descriptions for Order Messages
+  - The Order Messages are now removed after usage
 * BanquetVision
   - Added explanation as to why Khadgar needs to get into the Banquet Hall
   - Removed dialog button Nothing
@@ -406,7 +512,9 @@
 * ReportDemon cinematic
   - Removed the demon
   - The reveal effect is now properly destroyed
-- Guldan cinematic: Can no longer see the Outland sky before the Outland scene
+* Guldan cinematic
+  - Can no longer see the Outland sky before the Outland scene
+  - Starting the cinematic will no longer clear the trigger queue
 - Garona: The FelHound sound can now be heard
 * Leaving
   - Added effects to visualize the path blocking
@@ -427,6 +535,7 @@
   - The island no longer deactivated with the second group of warlocks
   - Will now check more frequently if a hero stands on a Portal
   - Moved second group of ChickenGrunts to the south
+  - Added a Tome of Strength+2
 * ScoutTower
   - Added more enemy units
   - Increased acquisition range of enemy units
@@ -445,15 +554,19 @@
   - Destroying a Prison tree now destroys the other too
   - Moved Prison trees to the west
 - Added a delay before a hero becomes invulnerable
-- Garona may now also use the Chest Key
 - Khadgar and Garona can no longer attack units
 - All enemy and neutral units are now vulnerable
 - All enemy and neutral units are now periodically healed
 - Added more orcs
 - Will no longer create additional items if Khadgar is not restored from game cache
+- Added more pathing blockers around the prison cells
+- The Tomes of Experience will no longer be hidden at map start
+- Replaced all Tomes of Experience with Tomes of Greater Experience
 
 ### User Interface
 * Entrance
+  - Merged quests "Home and Away" and "Disguise Again"
+  - Changed quest requirement to "Disguise Khadgar"
   - Thorough transmission is now triggered after the first Elevator
   - The Disguise quest is now always discovered before completion
 - Water: Removed debug messages when Garona drinks an Elixir of Water Walking
@@ -473,9 +586,11 @@
 
 ### Audio/Visuals
 - Moved some Glowing Runes
-- Intro cinematic: Added fade
+- Intro cinematic: Added initial burrow and disguise transmissions
 - Nielas cinematic: Khadgar is now stopped when the cinematic starts
 - Can no longer hear combat sounds during cinematics
+- Changed camera angles in village center
+- Changed camera angles around Renegade Wizard
 * Renegade Wizard
   - Removed the Advanced Boulder Tower
   - Replaced Sasquatches with orcs
@@ -490,26 +605,27 @@
 
 ## Chapter 7
 ### Gameplay
+- Lothar and Garona now become playable characters in certain situations
 - Main Hall: Can now speak to the Statue without carrying the Song of Aegwynn
-* Banquet Hall
-  - Can no longer get the Cheese by going to Cook on Hard difficulty
-  - Moved a Tome of Experience
+- Banquet Hall: Moved a Tome of Experience
+- Botanic Garden: Vines no longer block movement after being removed
 * Chapel
   - Removed a Tome of Experience
   - Moved a Life Egg
-* Garden
-  - Can no longer get the Spirit Drink by going to Moroes on Hard difficulty
-  - Garona is now invulnerable
-- Library: Changed maximum number of Slime Demons to 4/6/8
 - Secret: Difficulty now affects number of dialog buttons for the Door Code
-- Observatory: Increased range of where Telescope items can be used
 * Statue Combat
   - Khadgar will no longer be forced to die on his first attempt
   - Replaced turn-based combat with real-time combat and puzzles
   - Removed Statue Combat Rules
   - The MeetMedivh/OldKhadgar cinematics are now automatically replayed when losing
+  - Will no longer replenish mana after a fight
 - Fixed Spirit Drink and Cheese appearing twice
 - Improved path blocking
+- Increased experience rate at level 8 from 60% to 100%
+- Increased maximum hero level from 9 to 10
+- Moved Life Egg
+- Added a Tome of Knowledge
+- Replaced all Tomes of Experience with Tomes of Greater Experience
 
 ### User Interface
 * Main Hall
@@ -517,21 +633,16 @@
   - Improved description of Reverse Speech
   - The Statue now gives the Statue Combat Rules to Khadgar immediately
   - Changed quest requirement to "Activate and defeat the Corrupted Minions"
-* Garden
-  - Changed quest requirement to "Heal the plants" on Hard difficulty
-  - Added dialog button for asking Garona for a blade
-- Library: Changed quest requirement to "Kill the Library Demons"
-* Observatory
-  - Items descriptions for the Telescope are now more ambiguous
-  - Changed name of List to Telescope List and improved description
 * Lothar
   - Changed a dialog button text
   - Changed transmission about the Song of Aegwynn being the key
+  - Increased hero level from 9 to 10
 * Statue Combat
   - Changed ownership of all Statues minions to player 5 (Corrupted)
   - Added "Main Quest Completed" message
 - Random Swordsman transmissions will now only play once
 - Renamed Cook to Cook's Corpse and Moroes to Moroes's Corpse
+- The "Defeat Medivh" requirement is now properly marked as completed
 
 ### Audio/Visuals
 * Intro cinematic
@@ -541,6 +652,7 @@
   - Increased death time of Llane
   - Increased death time of Llane from 1.5 to 10 seconds
   - Honor Guards will now walk towards Llane
+  - Replaced Spell Breakers with Swordsmen
 * OldKhadgar cinematic
   - Changed cameras
   - Added death animation to Khadgar
@@ -549,13 +661,6 @@
   - Changed cameras
   - Lothar's shackles are now destroyed when Medivh is attacked
   - All items are now removed
-* Banquet Hall
-  - The portals are now removed after teleporting the rats
-  - Replaced PlaceCheese transmission with GoodJob sound
-* Library
-  - Changed model of Sludge Demon to Sludge Minion
-  - Removed Slime Demon
-- Observatory: Changed models of Gearwheel, Hammer and Radar to the standard model
 * Statue Combat
   - Added a Force Wall at the endfight
   - The final battle themes will no longer repeat
@@ -567,15 +672,64 @@
 - Changed camera in Museum
 - The Glowing Runes in Medivh's Quarters are now visible on all difficulty levels
 - Changed tint color of Fountain
-- Will no play ItemReceived sound when finding all Spectres
-- Changed special effect when finding all Spectres
+- Will no play ItemReceived sound when finding all Specters
+- Changed special effect when finding all Specters
+
+### Quests
+#### Banquet Hall
+- Can no longer get the Cheese by going to Cook on Hard difficulty
+- Added more Rats
+- Rats no longer wander
+- Increased collision size of rats from 0 to 16
+- The Storage Room is now closed
+- Added Storage Room key to the nearby footman
+- The portals are now removed after teleporting the rats
+- Replaced PlaceCheese transmission with GoodJob sound
+
+#### Chapel
+- The Chapel Guide can now be dropped
+- New icon for Chapel Guide by ~Nightmare
+- Must now disassemble Bound Chapel Guide to obtain The Chapel Guide
+- Bound Chapel Guide/The Chapel Guide can no longer be put back into the bookshelf
+
+#### Garden
+- Can no longer get the Spirit Drink by going to Moroes on Hard difficulty
+- Garona is now invulnerable
+- Added Circle of Power for Garona
+- Changed quest requirement to "Heal the plants" on Hard difficulty
+- Added dialog button for asking Garona for a blade
+- The Wooden Hilt can now be stolen from a Treant
+
+#### Library
+* Sludge Demon
+  - Changed attack type from Normal to Pierce
+  - Increased attack range from 100 to 300
+  - Added projectile art
+  - Changed model of Sludge Demon to Sludge Minion
+  - Now split at 250/300/350 hit points depending on difficulty
+  - Changed maximum number of Sludge Demons to 4/6/8
+- Moved Sludge Demons northeast
+- Moved tripline to start the fight
+- Changed quest requirement to "Kill the Library Demons"
+- Removed Slime Demon
+- Added books lying on the ground
+
+#### Observatory
+- Increased range of where Telescope items can be used
+- Replaced Gearwheel inside Chest with Radar
+- Replaced Wooden Hilt inside Chest with Small Clock
+- Replaced Spanner with Locked Toolbox
+- Items descriptions for the Telescope are now more ambiguous
+- Changed name of List to Telescope List and improved description
+- Changed models of Gearwheel, Spanner and Radar to the standard model
 
 ## Epilogue
+- Added more text by Medivh
+- Improved effects
+- Added sound effect when Medivh morphs into a raven
 - Restructured types of credits
 - Updated all credits
 - Increased duration of credits
 - Changed final message
 - Delayed final fade out
-- Removed waterfall sounds
-- Added sound effect when Medivh morphs into a raven
 - The cinematic music will no longer play over the credits music
